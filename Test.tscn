@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://volume_shader.shader" type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/LOOP = 32
+shader_param/NOISE_SCALE = 4.0
+shader_param/SIZE = 3.0
+shader_param/ABSORPTION = 0.05
+shader_param/OPACITY = 2.0
+shader_param/OFFSET = 0.0
+shader_param/SMOKE_COLOR = Vector3( 1, 1, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126441, 2.28882e-05, 0.113514 )
+mesh = SubResource( 2 )
+material/0 = null
